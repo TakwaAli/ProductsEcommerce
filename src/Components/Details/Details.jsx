@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import style from './Details.css'
+import { CartContext } from '../../Contexts/CartContext';
 export default function Details() {
   const [productDetails, setproductDetails] = useState([]);
   const param = useParams()
-
+  const {addToCart}=useContext(CartContext)
 //console.log(param);
   async function GetProductDetails() {
     try {
@@ -35,7 +36,7 @@ export default function Details() {
         <p className='mt-2 h4'>{productDetails?.description}</p>
         <h4 className='mt-2'>price : {productDetails?.price}EGP</h4>
         
-        <button className='fs-5 btn mx-4 '>+<i className="fa-solid fa-cart-shopping fs-2 text-warning "></i></button>
+        <button onClick={()=>addToCart(productDetails,productDetails.id)} className='fs-5 btn mx-4 '>+<i className="fa-solid fa-cart-shopping fs-2 text-warning "></i></button>
         <button className='fs-5 btn mx-4 '>+<i className="fa-solid fa-shield-heart fs-2 text-danger"></i></button>
       </div>
     </div>

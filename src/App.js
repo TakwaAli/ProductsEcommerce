@@ -7,6 +7,7 @@ import Layout from './Components/Layout/Layout';
 import NotFound from './Components/NotFount/NotFound'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import ProductProvider, { ProductContext } from './Contexts/ProductContext';
+import CartProvider from './Contexts/CartContext';
 function App() {
   let router =createBrowserRouter([{
     path:"",element:<Layout></Layout>,children:[
@@ -18,10 +19,14 @@ function App() {
   }])
   return (
    <>
+   <CartProvider>
+
    <ProductProvider>
    <RouterProvider router={router}></RouterProvider>
    </ProductProvider>
     
+   </CartProvider>
+ 
    </>
   );
 }
