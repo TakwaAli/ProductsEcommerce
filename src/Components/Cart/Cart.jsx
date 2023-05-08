@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../../Contexts/CartContext'
-
+import style from './Cart.css'
 
 export default function Cart() {
   const {cart,clearCart ,total,itemAmount,removeFromCart ,increaseAmount,decreaseAmount}=useContext(CartContext)
@@ -9,8 +9,8 @@ export default function Cart() {
   
   <div className='bg-main-light p-4 my-4'>
     <h3>Shop Cart :</h3>
-    {/* <h6>Total Cart Price :{CartDetails.totalCartPrice}</h6> */}
-    {(cart)?.map((product)=><div key={product.id} className='row'>
+    <h6>Total Cart Price : ${parseFloat(total).toFixed(2)}</h6>
+    {(cart)?.map((product)=><div key={product.id} className='row cart-shadow mt-5 p-3'>
 
     <div className='col-md-1'>
     <img src={product.image} className='w-100' alt="" />
