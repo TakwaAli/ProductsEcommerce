@@ -1,9 +1,9 @@
 import React from 'react'
-
+import style from './Footer.css'
 export default function Footer() {
   return (
   <>
- <div className='container-fluid bg-dark p-3'>
+ <div className='container-fluid bg-dark p-3 footer '>
   <div className="row justify-content-center mx-auto ">
    <div className='col-2'>
     <h5 className='text-white p-2  mx-5'> Contact us </h5>

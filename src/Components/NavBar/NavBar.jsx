@@ -7,7 +7,7 @@ export default function NavBar() {
   const {itemAmount}=useContext(CartContext)
   return (
   <>
-  <nav className="navbar navbar-expand-sm navbar-light bg-light   ">
+  <nav className="navbar navbar-expand-sm navbar-light bg-light nav ">
       <div className="container">
       <Link className="navbar-brand" to='/'><img className='w-25' src={logo1}></img></Link>
       <button className="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
