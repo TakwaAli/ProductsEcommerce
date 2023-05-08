@@ -16,7 +16,7 @@ export default function Footer() {
           
    </div>
   </div>
-  <p className='text-white text-center mt-4 '> Copyright &copy; online shop 2023</p>
+  <p className='text-white text-center mt-4 p-2 '> Copyright &copy; online shop 2023</p>
  </div>
   </>
   )

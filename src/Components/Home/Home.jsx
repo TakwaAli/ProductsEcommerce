@@ -2,13 +2,15 @@ import React, { useContext } from 'react'
 import { ProductContext } from '../../Contexts/ProductContext';
 import styles from './Home.css'
 import { Link } from 'react-router-dom';
+import Header from '../Header/Header';
 export default function Home() {
   const { products } = useContext(ProductContext);
   console.log(products);
   return (
     <>
-      <div className="container">
-        <div className="row  justify-content-center ">
+    
+      <div className="container pt-5 mt-5">
+        <div className="row d-flex justify-content-center ">
 
           {products.map((product) => {
             return (
