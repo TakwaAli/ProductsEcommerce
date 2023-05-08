@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-
+import style from './Details.css'
 export default function Details() {
   const [productDetails, setproductDetails] = useState([]);
   const param = useParams()
@@ -30,12 +30,13 @@ export default function Details() {
        
       </div>
       <div className='col-md-8 mt-5'>
-        <h2 className='mt-2'>{productDetails?.title}</h2>
+        <h2 className='mt-2 title-color'>{productDetails?.title}</h2>
         <h2 className='mt-2'>{productDetails?.category}</h2>
         <p className='mt-2 h4'>{productDetails?.description}</p>
         <h4 className='mt-2'>price : {productDetails?.price}EGP</h4>
         
-        <button className='fs-5 btn  '>+ Add To Cart</button>
+        <button className='fs-5 btn mx-4 '>+<i className="fa-solid fa-cart-shopping fs-2 text-warning "></i></button>
+        <button className='fs-5 btn mx-4 '>+<i className="fa-solid fa-shield-heart fs-2 text-danger"></i></button>
       </div>
     </div>
 
