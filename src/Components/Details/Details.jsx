@@ -23,7 +23,7 @@ export default function Details() {
   },[])
   return (
   <>
-   <div className="row align-items-center">
+   <div className="row align-items-center p-5 m-5">
       <div className='col-md-4 '>
         <img className='w-75' src={productDetails?.image} alt="" />
 
