@@ -18,7 +18,7 @@ export default function Cart() {
     <div className='col-md-11 d-flex justify-content-between'>
      <div>
      <h6>{product.title}</h6>
-     <h6 className='text-main'>price: {product.price}</h6>
+     <h6 className='text-main'>price: {parseFloat(product.price *product.amount).toFixed(2)}</h6>
      <button onClick={()=>removeFromCart(product.id)} className='btn m-0 p-z'><i className='fa-regular fa-trash-can text-danger'></i> Remove</button>
      </div>
      <div>
