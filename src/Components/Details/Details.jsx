@@ -24,13 +24,14 @@ export default function Details() {
   },[])
   return (
   <>
-   <div className="row align-items-center p-5 m-5">
-      <div className='col-md-4 '>
+ <div className="container-fluid">
+   <div className="row align-items-center pt-5 mt-5">
+      <div className='col-lg-4 col-md-4 col-sm-12'>
         <img className='w-75' src={productDetails?.image} alt="" />
 
        
       </div>
-      <div className='col-md-8 mt-5'>
+      <div className='col-lg-8 col-md-8 col-sm-12 mt-5'>
         <h2 className='mt-2 title-color'>{productDetails?.title}</h2>
         <h2 className='mt-2'>{productDetails?.category}</h2>
         <p className='mt-2 h4'>{productDetails?.description}</p>
@@ -40,7 +41,7 @@ export default function Details() {
        
       </div>
     </div>
-
+    </div>
   
   </>
   )
