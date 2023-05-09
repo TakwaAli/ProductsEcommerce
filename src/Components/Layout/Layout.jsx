@@ -9,10 +9,10 @@ export default function Layout() {
   <>
   <NavBar></NavBar>
   
-  <div className="container">
+  <div className="container-fluid ">
   <Outlet></Outlet>
   </div>
-  <Footer></Footer>
+  
   </>
   )
 }

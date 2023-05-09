@@ -5,11 +5,11 @@ import Details from './Components/Details/Details';
 import Cart from './Components/Cart/Cart';
 import Layout from './Components/Layout/Layout';
 import NotFound from './Components/NotFount/NotFound'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter, createHashRouter } from 'react-router-dom';
 import ProductProvider, { ProductContext } from './Contexts/ProductContext';
 import CartProvider from './Contexts/CartContext';
 function App() {
-  let router =createBrowserRouter([{
+  let router =createHashRouter([{
     path:"",element:<Layout></Layout>,children:[
       {index:true,element: <Home/> },
       {path:"cart",element:<Cart/> },
@@ -21,7 +21,7 @@ function App() {
    <>
    <CartProvider>
 
-   <ProductProvider>
+  <ProductProvider>
    <RouterProvider router={router}></RouterProvider>
    </ProductProvider>
     

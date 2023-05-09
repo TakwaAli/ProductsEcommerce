@@ -36,8 +36,8 @@ export default function Details() {
         <p className='mt-2 h4'>{productDetails?.description}</p>
         <h4 className='mt-2'>price : {productDetails?.price}EGP</h4>
         
-        <button onClick={()=>addToCart(productDetails,productDetails.id)} className='fs-5 btn mx-4 '>+<i className="fa-solid fa-cart-shopping fs-2 text-warning "></i></button>
-        <button className='fs-5 btn mx-4 '>+<i className="fa-solid fa-shield-heart fs-2 text-danger"></i></button>
+        <button onClick={()=>addToCart(productDetails,productDetails.id)} className='fs-5 btn mx-4 '>+<i className="fa-solid fa-cart-shopping fs-2 title-color "></i></button>
+       
       </div>
     </div>
 
